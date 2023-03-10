@@ -2,7 +2,7 @@ export { }
 
 declare global {
   interface Post {
-    id: string
+    slug: string
     title: string
     content: string
   }

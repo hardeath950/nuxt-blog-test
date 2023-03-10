@@ -18,7 +18,7 @@ const posts = await getItems<Post[]>({ collection: 'posts' })
         <hr class="w-full my-8 border-gray-300">
       </div>
       <div class="flex flex-col items-center justify-center space-y-4 transition-all duration-700">
-        <NuxtLink v-for="post in posts" :key="post.id" class="capitalize border p-4 shadow-md hover:shadow-sm" :to="`/articles/${post.id}`">
+        <NuxtLink v-for="post in posts" :key="post.slug" class="capitalize border p-4 shadow-md hover:shadow-sm" :to="`/articles/${post.slug}`">
           {{ post.title }}
         </NuxtLink>
       </div>
