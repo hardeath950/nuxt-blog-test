@@ -2,8 +2,12 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@huntersofbook/naive-ui-nuxt'
+    '@huntersofbook/naive-ui-nuxt',
+    'nuxt-directus'
   ],
+  directus: {
+    url: 'http://localhost:8055'
+  },
   typescript: {
     shim: false
   },
