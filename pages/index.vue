@@ -19,6 +19,10 @@ const posts = await getItems<Post[]>({ collection: 'posts' })
       </div>
       <div class="flex flex-col items-center justify-center space-y-4 transition-all duration-700">
         <NuxtLink v-for="post in posts" :key="post.slug" class="capitalize border p-4 shadow-md hover:shadow-sm" :to="`/articles/${post.slug}`">
+          <img
+            :src="'http://localhost:8055/assets/' + post.image"
+            alt="webp"
+          >
           {{ post.title }}
         </NuxtLink>
       </div>

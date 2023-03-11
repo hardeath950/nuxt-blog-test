@@ -16,6 +16,10 @@ const router = useRouter()
       <h2>
         {{ post.title }}
       </h2>
+      <img
+        :src="'http://localhost:8055/assets/' + post.image"
+        alt="webp"
+      >
       <hr class="w-full my-8 border-gray-300">
       <p v-html="post.content" />
     </div>
