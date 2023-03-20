@@ -19,7 +19,7 @@ const props = defineProps<{
     </div>
     <div class="flex flex-col justify-between flex-1 p-6 bg-white">
       <div class="flex-1">
-        <NuxtLink :to="`/articles/${props.article.slug}`" class="block mt-2">
+        <NuxtLink :to="`/blog/articles/${props.article.slug}`" class="block mt-2">
           <p class="text-xl font-semibold text-neutral-600">
             {{ props.article.title }}
           </p>
@@ -41,8 +41,8 @@ const props = defineProps<{
         </div>
         <div class="ml-3">
           <p class="text-sm font-medium text-neutral-600">
-            <a href="https://twitter.com/Mike_Andreuzza" class="hover:underline">  {{ props.article.user_created.first_name }}
-              {{ props.article.user_created.last_name }}</a>
+            <span class="hover:underline">  {{ props.article.user_created.first_name }}
+              {{ props.article.user_created.last_name }}</span>
           </p>
           <div class="flex space-x-1 text-sm text-gray-500">
             <time datetime="2020-03-16"> {{ props.article.date_created }}</time>
