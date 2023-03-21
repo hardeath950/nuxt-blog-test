@@ -26,7 +26,7 @@ declare global {
     email_notifications: boolean
   }
 
-  export interface Post {
+  export interface Article {
     slug: string
     status: string
     sort: any
@@ -38,6 +38,43 @@ declare global {
     content: string
     summary: string
     image: string
+  }
+
+  export interface Product {
+    id: string
+    title: string
+    subtitle: string
+    description: string
+    handle: string
+    is_giftcard: boolean
+    status: string
+    images: any[]
+    thumbnail: string
+    options: any[]
+    variants: any[]
+    categories: any[]
+    profile_id: string
+    profile: any
+    weight: any
+    length: any
+    height: any
+    width: any
+    hs_code: any
+    origin_country: any
+    mid_code: any
+    material: any
+    collection_id: string
+    collection: any
+    type_id: string
+    type: any
+    tags: any[]
+    discountable: boolean
+    external_id: any
+    sales_channels: any[]
+    created_at: string
+    updated_at: string
+    deleted_at: string
+    metadata: any
   }
 
 }

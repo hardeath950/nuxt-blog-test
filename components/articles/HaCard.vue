@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 const props = defineProps<{
-  article: Post
+  article: Article
 }>()
 
 </script>

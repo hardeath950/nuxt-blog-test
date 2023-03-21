@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@huntersofbook/naive-ui-nuxt',
-    'nuxt-directus'
+    'nuxt-directus',
+    'nuxt-medusa'
   ],
   directus: {
     url: 'http://localhost:8055'
