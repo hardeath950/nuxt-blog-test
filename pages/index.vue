@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+const router = useRouter()
 </script>
 
 <template>
@@ -14,7 +15,17 @@
         </p>
         <hr class="w-full my-8 border-gray-300">
       </div>
-      <ArticlesHaList />
+
+      <div class="flex items-center justify-center">
+        <n-button-group size="small">
+          <n-button @click="() => router.push('/blog')">
+            Blog
+          </n-button>
+          <n-button @click="() => router.push('/store')">
+            Store
+          </n-button>
+        </n-button-group>
+      </div>
     </div>
   </div>
 </template>
