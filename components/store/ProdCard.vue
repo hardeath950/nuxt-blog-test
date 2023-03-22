@@ -47,7 +47,7 @@ const props = defineProps<{
       </h3>
 
       <p class="mt-1.5 text-sm text-gray-700">
-        {{ useProducts().getPrice(product)?.amount }}
+        {{ useProducts().getPrice(product, {currency: 'brl'}) }}
       </p>
 
       <form class="mt-4">
