@@ -1,6 +1,19 @@
 <script setup lang="ts">
-
+const client = useMedusaClient()
+const route = useRoute()
 const router = useRouter()
+const product = ref<Product>()
+const activeImage = ref<MedusaImageObject>()
+
+async function load() {
+  product.value = await client.products.retrieve(route?.params?.id?.toString())
+}
+
+onMounted(async () => {
+  await load()
+  if (product.value?.images)
+    activeImage.value = product.value.images[0]
+})
 </script>
 
 <template>
@@ -9,6 +22,7 @@ const router = useRouter()
       Voltar
     </n-button>
     <section>
+      {{ product }}
       <div class="relative mx-auto max-w-screen-xl px-4 py-8">
         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
           <div class="grid grid-cols-2 gap-4 md:grid-cols-1">

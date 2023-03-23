@@ -14,7 +14,7 @@
         </p>
         <hr class="w-full my-8 border-gray-300">
       </div>
-      <ArticlesHaList />
+      <BlogArtList />
     </div>
   </div>
 </template>

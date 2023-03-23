@@ -4,13 +4,13 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@huntersofbook/naive-ui-nuxt',
     'nuxt-directus',
-    'nuxt-medusa'
+    'nuxt-medusa',
   ],
   directus: {
-    url: 'http://localhost:8055'
+    url: 'http://localhost:8055',
   },
   typescript: {
-    shim: false
+    shim: false,
   },
-  ssr: false
+  ssr: false,
 })

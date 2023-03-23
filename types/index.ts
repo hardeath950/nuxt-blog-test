@@ -89,6 +89,15 @@ declare global {
     tax_rates: any
   }
 
+  export interface MedusaImageObject {
+    id: string
+    created_at: string
+    updated_at: string
+    deleted_at: any
+    url: string
+    metadata: any
+  }
+
   export interface Product {
     id: string
     title: string
@@ -97,7 +106,7 @@ declare global {
     handle: string
     is_giftcard: boolean
     status: string
-    images: any[]
+    images?: MedusaImageObject[]
     thumbnail: string
     options: any[]
     variants: Variant[]

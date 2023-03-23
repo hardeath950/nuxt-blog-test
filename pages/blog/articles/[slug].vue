@@ -2,7 +2,7 @@
 const { getItemById } = useDirectusItems()
 const route = useRoute()
 
-const post = await getItemById<Post>({ collection: 'posts', id: route?.params?.slug?.toString() })
+const post = await getItemById<Article>({ collection: 'posts', id: route?.params?.slug?.toString() })
 
 const router = useRouter()
 </script>
@@ -17,7 +17,7 @@ const router = useRouter()
         {{ post.title }}
       </h2>
       <img
-        :src="'http://localhost:8055/assets/' + post.image"
+        :src="`http://localhost:8055/assets/${post.image}`"
         alt="webp"
       >
       <hr class="w-full my-8 border-gray-300">
