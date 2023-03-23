@@ -6,7 +6,8 @@ const product = ref<Product>()
 const activeImage = ref<MedusaImageObject>()
 
 async function load() {
-  product.value = await client.products.retrieve(route?.params?.id?.toString())
+  const result = await client.products.retrieve(route?.params?.id?.toString())
+  product.value = result?.product
 }
 
 onMounted(async () => {
@@ -27,8 +28,8 @@ onMounted(async () => {
         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
           <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
             <img
-              alt="Les Paul"
-              src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              :alt="activeImage?.id"
+              :src="activeImage?.url"
               class="aspect-square w-full rounded-xl object-cover"
             >
 
