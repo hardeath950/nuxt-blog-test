@@ -23,7 +23,6 @@ onMounted(async () => {
       Voltar
     </n-button>
     <section>
-      {{ product }}
       <div class="relative mx-auto max-w-screen-xl px-4 py-8">
         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
           <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
@@ -35,27 +34,15 @@ onMounted(async () => {
 
             <div class="grid grid-cols-2 gap-4 lg:mt-4">
               <img
-                alt="Les Paul"
-                src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                class="aspect-square w-full rounded-xl object-cover"
-              >
-
-              <img
-                alt="Les Paul"
-                src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                class="aspect-square w-full rounded-xl object-cover"
-              >
-
-              <img
-                alt="Les Paul"
-                src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                class="aspect-square w-full rounded-xl object-cover"
-              >
-
-              <img
-                alt="Les Paul"
-                src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                class="aspect-square w-full rounded-xl object-cover"
+                v-for="image in product?.images"
+                :key="image.id"
+                :alt="image.id"
+                :src="image.url"
+                class="aspect-square w-full rounded-xl object-cover cursor-pointer"
+                :class="{
+                  'border-purple-500 border-4 border-dashed': image.id === activeImage?.id,
+                }"
+                @click="() => activeImage = image"
               >
             </div>
           </div>
