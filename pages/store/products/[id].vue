@@ -57,7 +57,7 @@ onMounted(async () => {
             <div class="mt-8 flex justify-between">
               <div class="max-w-[35ch] space-y-2">
                 <h1 class="text-xl font-bold sm:text-2xl">
-                  Fun Product That Does Something Cool
+                  {{ product?.title }}
                 </h1>
 
                 <p class="text-sm">
@@ -130,16 +130,9 @@ onMounted(async () => {
             <div class="mt-4">
               <div class="prose max-w-none">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  veniam dicta beatae eos ex error culpa delectus rem tenetur,
-                  architecto quam nesciunt, dolor veritatis nisi minus inventore,
-                  rerum at recusandae?
+                  {{ product?.description }}
                 </p>
               </div>
-
-              <button class="mt-2 text-sm font-medium underline">
-                Read More
-              </button>
             </div>
 
             <form class="mt-8">

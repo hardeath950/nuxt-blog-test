@@ -17,7 +17,7 @@
                 id="search"
                 class="h-10 w-full rounded-full border-none bg-white pl-4 pr-10 text-sm shadow-sm sm:w-56"
                 type="search"
-                placeholder="Search something..."
+                placeholder="Search..."
               >
 
               <button
